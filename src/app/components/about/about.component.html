@@ -1,0 +1,49 @@
+<main id="main-page" *ngIf="!allSectionsLoaded"> <app-loader></app-loader>
+</main>
+
+<main id="main-page" *ngIf="allSectionsLoaded">
+  <div class="header-section">
+      <h1 class="header-title pop-400"> Inside My World </h1>
+      <h1 class="header-bold-title pop-700">About <span class="sub-header-bold-title">Me</span></h1>
+      <p class="pop-pargraph header-para"> Explore to learn more about my journey, from my education and certifications to my professional experiences </p>
+  </div>
+
+  <div class="about-me">
+    <div class="left-section-about">
+      <h1 class="pop-title"> Get to Know Me </h1>
+      <h1 class="pop-bold-title "> Who Am I ?</h1>
+      <p class="who-am-i-para pop-pargraph">{{WhoAmIDescription}}</p>
+      <ul class="list">
+        <li class="pop-pargraph list-data " *ngFor="let item of WhoAmIList"> {{item}} </li>
+      </ul>
+    </div>
+    <div class="profile-image" [ngStyle]="{'background-image': 'url(' + WhoAmI_Image + ')'}" ></div>
+  </div>
+
+  <div class="education-section">
+    <div class="education-left-side">
+      <h1 class="pop-title"> Education & Learning </h1>
+      <h1 class="pop-bold-title education-uni-title "> Cairo University, Computer Science & Artificial Intelligence</h1>
+      <p class="pop-pargraph who-am-i-para"> {{EducationDescription}}</p>
+      <ul class="list">
+        <li class="pop-pargraph list-data " *ngFor="let item of EducationList"> {{item}}  </li>
+      </ul>
+    </div>
+    <div class="university-image"> </div>
+  </div>
+
+  <div class="skills-section">
+      <h1 class="pop-title"> My Skills </h1>
+      <h1 class="pop-bold-title"> Skills in action </h1>
+      <div class="skills">
+          <div class="skill" *ngFor="let item of SkillNames let i = index">
+            <h1 class="pop-title">{{item}} </h1>
+            <ul class="skill-list">
+              <li class="pop-pargraph"> {{SkillDesc[i]}}</li>
+            </ul>
+          </div>
+      </div>
+  </div>
+  <app-certificates [certificatesData]="CertificatesData"></app-certificates>
+  <app-get-in-touch [contactData]="ContactData" id="about-contact"> </app-get-in-touch>
+</main>

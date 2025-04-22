@@ -1,0 +1,228 @@
+#nav{
+  background-color: black;
+  height: 90px;
+  margin-top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px 0px 50px;
+  position: fixed;
+  z-index: 10000;
+  width: 95%;
+  border-bottom: 1px solid #2bcf7d1c;
+  transition: border-bottom 0.3s ease;
+}
+.logo{
+  display: flex;
+  gap: 4px;
+}
+
+.logo h1{
+  font-family: "Poppins";
+  font-weight: 600;
+  font-style: normal;
+  color: white;
+  font-size: 26px;
+}
+
+.eldeen{
+  color: #2BCF7E !important;
+  margin-top: 15px;
+}
+
+.tabs{
+  display: flex;
+  gap: 50px;
+}
+
+.tab{
+  color: white;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.download-cv-bt{
+  background-color: #2BCF7E;
+  width: 150px;
+  height: 43px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-family: "Work Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+
+.active-bt{
+  color: #2BCF7E !important;
+}
+
+.hamburger{
+  width: 40px;
+  height: 40px;
+  display: none;
+  cursor: pointer;
+}
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: -60%;
+  width: 60%;
+  height: 100vh;
+  background-color: #111111;
+  padding: 90px 40px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  border-left: 1px solid #2bcf7d1c;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  transition: right 0.3s ease-in-out;
+
+}
+
+.sidebar.show {
+  right: 0;
+}
+
+.side-tab{
+  color: white;
+  text-decoration: none;
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  height: 40px;
+}
+
+.projects-tab{
+  color: white;
+  text-decoration: none;
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  height: 40px;
+}
+
+
+.side-tab::after{
+  content: "";
+  width: 1px;
+  height: 0;
+  background-color: #2BCF7E;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  transition: height 2s ease-in-out;
+  display: block;
+}
+
+.active-side-bar::after{
+  height: 90%;
+}
+
+.side-tab:hover{
+  background-color: #2bcf7d2f;
+
+}
+
+.fa-xmark{
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  cursor: pointer;
+}
+
+.fa-xmark:hover{
+  color: #2BCF7E;
+}
+
+.fa-angle-down , .fa-angle-up{
+  color: white;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.projects{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-projects{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.sub-projects-tab{
+  width: 100%;
+  text-align: center !important;
+  margin-bottom: 10px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.sub-projects-tab:hover{
+  background-color: #2bcf7d2f;
+
+}
+
+
+.sub-projects {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.show-projects {
+  height: 140px !important ;
+}
+
+
+.sub-project{
+  width: 100%;
+}
+
+.line{
+  border: 0.2px solid rgba(59, 59, 59, 0.253);
+}
+
+
+@media(max-width: 1000px) {
+
+  .tab{
+    display: none;
+  }
+
+  .download-cv-bt{
+    display: none;
+  }
+
+  .hamburger{
+    display: block;
+  }
+
+  #nav{
+    padding-right: 75px;
+    padding-left: 25px;
+    width: 90.5%;
+  }
+
+
+}

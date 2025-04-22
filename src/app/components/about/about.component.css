@@ -1,0 +1,92 @@
+.about-me{
+  width: 1500px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+.who-am-i-para{
+  max-width: 900px;
+  word-spacing: 1px;
+  font-size: 16px;
+  margin-top: 0px;
+  line-height: 27px;
+}
+
+.who-am-i-para:hover{
+  color: #2BCF7E;
+}
+
+.list-data{
+  max-width: 850px;
+  margin-bottom: 15px;
+}
+
+.list-data:hover{
+  color: #2BCF7E;
+}
+
+.list{
+  margin-left: -25px;
+}
+
+.profile-image{
+ width: 400px;
+ height: 500px;
+ background-image: url("/Assests/images/pexels-photo-17594394.webp");
+ background-position: center;
+ background-size: cover;
+ background-repeat: no-repeat;
+ border-radius: 10px;
+}
+
+.education-section{
+  width: 1500px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.education-uni-title{
+  font-size: 40px;
+  max-width: 880px;
+}
+
+.education-left-side{
+  max-width: 900px;
+}
+
+.university-image{
+  width: 350px;
+  height: 300px;
+  background-image: url("/Assests/images/uni");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+
+
+.skills-section{
+  width: 1500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill{
+  width: 600px;
+}
+
+.skills{
+  width: 1500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#about-contact{
+  min-width: 1350px;
+}

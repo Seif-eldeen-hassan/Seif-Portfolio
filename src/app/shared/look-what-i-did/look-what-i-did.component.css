@@ -1,0 +1,105 @@
+.Portfolio-section{
+  display: flex;
+  flex-direction: column;
+}
+
+.Portfolio-par{
+  margin-top: 0px;
+  max-width: 870px;
+}
+
+.port-title{
+  margin-bottom: 10px;
+}
+
+.center-text{
+  align-items: center;
+}
+
+.Portfolio{
+  margin-top: 90px;
+  display: flex;
+  width: 1250px;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.Portfolio-card{
+  width: 390px ;
+  min-width: 390px;
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("/Assests/images/desktop-preview.jpg");
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(43, 207, 126, 0.1);
+}
+
+.Portfolio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(43, 207, 126, 0.2);
+}
+
+.portfolio-card-details{
+  position: absolute;
+  bottom: 0px;
+  background-color: #1a1919;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  border-radius: 0px 0px 10px 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.portfolio-card-name{
+  color: white;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.portfolio-card-desc{
+  color: white;
+  font-size: 14px;
+  margin-top: 0px;
+}
+
+.prot-icon{
+  width: 33px;
+  height: 33px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.empty-projects{
+  font-size: 40px;
+  text-align: center;
+  max-width: 1200px;
+  margin-left: 20px;
+}
+
+@media (max-width: 768px){
+  .Portfolio-section{
+    max-width: 300px;
+  }
+
+  .look-title{
+    text-align: center;
+  }
+
+  .Portfolio{
+    max-width: 300px;
+  }
+
+  .Portfolio-card{
+    max-width: 300px;
+    min-width: 300px;
+    width: 300px;
+    height: 300px;
+  }
+
+}

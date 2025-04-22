@@ -1,0 +1,12 @@
+<div class="about-section" >
+  <h1 class="pop-title">About </h1>
+  <h1 class="pop-bold-title">About Me</h1>
+  <p class="pop-pargraph about-para">{{AboutDescription}}</p>
+  <h1 class="pop-bold-title Proficient-title" #projectSection> Proficient in</h1>
+  <div class="Proficients">
+    <div class="Proficient" *ngFor="let item of Profients">
+      <h1 class="Proficient-name pop-400"> {{item}} </h1>
+      <img src="/Assests/images/arrow_outward.png"  class="up-arrow">
+    </div>
+  </div>
+</div>

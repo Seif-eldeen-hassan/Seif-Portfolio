@@ -1,0 +1,155 @@
+.Achievement{
+  max-width: 100%;
+}
+
+.achievement-title{
+  font-family: "Poppins";
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+  color: #2BCF7E;
+}
+
+.best-projects{
+  color: #ffffff;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-style: normal;
+  font-size: 48px;
+}
+
+.ach-pargraph{
+  font-size: 15px;
+  font-family: "Poppins";
+  font-weight: 300;
+  font-style: normal;
+  color: #D9D9D9;
+  max-width: 570px;
+}
+
+.explore{
+  color: white;
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.explore-bt{
+  display: flex;
+  gap: 20px;
+}
+
+.explore-icon{
+  margin-top: 25px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.achievement-section{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 150px;
+}
+
+.projects{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.project{
+  background-color: RGB(251, 243, 247,0.1);
+  width: 450px;
+  height: 90px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 4% 7% 4% 7%;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(43, 207, 126, 0.1);
+  cursor: pointer;
+}
+
+.project:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(43, 207, 126, 0.2);
+}
+
+.project-category{
+  color: white;
+  font-size: 20px;
+}
+
+.project-number{
+  font-size: 14px;
+  color: #D9D9D9;
+}
+
+.project-icon{
+  margin-top: 27px;
+  cursor: pointer ;
+}
+
+.skill{
+  font-size: 20px;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+  position: relative;
+}
+
+.skill-icon{
+  width: 35px;
+  height: 35px;
+  margin-top: 13px;
+}
+
+@media (max-width: 768px){
+  .Achievement{
+    align-items: center;
+    max-width:300px
+  }
+
+  .achievement-title{
+    text-align: center;
+  }
+
+  .best-projects{
+    font-size: 37px;
+    text-align: center;
+  }
+
+  .achievement-section{
+    flex-direction: column;
+    gap: 90px;
+  }
+
+  .left-ach-side{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ach-pargraph{
+    width: 300px;
+    text-align: center;
+  }
+
+  .project{
+    width: 260px;
+  }
+
+  .explore{
+    font-size: 16px;
+  }
+
+  .explore-icon{
+    width: 25px;
+    height: 25px;
+    margin-top: 31px;
+  }
+
+
+
+}

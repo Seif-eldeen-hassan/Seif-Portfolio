@@ -1,0 +1,40 @@
+<div class="contact-section">
+  <div class="left-contact">
+      <h1 class="pop-title"> Contact Us</h1>
+      <h1 class="pop-bold-title">Get In touch</h1>
+      <p class=" contact-pargraph pop-pargraph">{{ContactDesc}}</p>
+      <div class="explore-bt">
+        <h1 class="pop-500 explore"> Contact Now</h1>
+        <img src="/Assests/images/arrow_right_alt.png" class="explore-icon">
+      </div>
+  </div>
+  <div class="right-contact">
+    <div class="contact-card">
+      <div class="logo-title-cont">
+        <img src="/Assests/images/mail.png" class="contact-icon">
+        <h1 class="contact-details pop-300"> Email : </h1>
+      </div>
+      <div class="contact-data">
+        <h1 class="contact-details pop-300" *ngFor="let item of Emails"> {{item}}</h1>
+      </div>
+    </div>
+    <div class="contact-card">
+      <div class="logo-title-cont">
+        <img src="/Assests/images/call_log.png" class="contact-icon">
+        <h1 class="contact-details pop-300"> Contact :</h1>
+      </div>
+      <div class="contact-data">
+          <h1 class="contact-details pop-300" *ngFor="let item of PhoneNumbers">  {{ '+' +item}} </h1>
+      </div>
+    </div>
+    <div class="contact-card">
+      <div class="logo-title-cont">
+        <img src="/Assests/images/distance.png" class="contact-icon" id="location">
+        <h1 class="contact-details pop-300"> Address :</h1>
+      </div>
+      <div class="contact-data">
+        <h1 class="contact-details pop-300" *ngFor="let item of Locations" >{{item}}</h1>
+      </div>
+    </div>
+  </div>
+</div>

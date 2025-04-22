@@ -1,0 +1,153 @@
+html,body{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+  overflow-x: hidden ;
+}
+
+#main-page{
+  background-color: black;
+  width: 100%;
+  min-height: 100%;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 180px;
+  padding-bottom: 200px;
+  padding-top: 120px;
+
+}
+
+
+.main-cont{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 180px;
+}
+
+
+.pop-300{
+  font-family: "Poppins";
+  font-weight: 300;
+  font-style: normal;
+}
+
+.pop-title{
+  font-size: 20px;
+  color: #2BCF7E;
+  font-family: "Poppins";
+  font-weight: 300;
+  font-style: normal;
+  margin-bottom: 0px;
+}
+
+.pop-bold-title{
+  font-family: "Poppins";
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
+  font-size: 48px;
+  margin-top: 0px;
+}
+
+.pop-pargraph{
+  font-family: "Poppins";
+  font-weight: 500;
+  font-style: normal;
+  color: #D9D9D9;
+  font-size: 15px;
+
+}
+
+.pop-400{
+  font-family: "Poppins";
+  font-weight: 500;
+  font-style: normal;
+}
+
+.pop-500{
+  font-family: "Poppins";
+  font-weight: 500;
+  font-style: normal;
+}
+
+.pop-700{
+  font-family: "Poppins";
+  font-weight: 700;
+  font-style: normal;
+}
+
+.header-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-bold-title{
+  font-size: 82px;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.sub-header-bold-title{
+  color: #2BCF7E;
+}
+
+.header-title{
+  color: #2BCF7E;
+  font-size: 23px;
+  margin-bottom: 0px;
+}
+
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-para{
+  margin-top: 20px;
+  text-align: center;
+  max-width: 470px;
+}
+
+.loading-card{
+  width: 1500px;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #2BCF7E;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  z-index: 100000000;
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px){
+  .main-cont{
+    max-width: 300px;
+  }
+}
+

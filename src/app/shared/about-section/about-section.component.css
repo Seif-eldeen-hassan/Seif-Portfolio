@@ -1,0 +1,68 @@
+.about-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1500px;
+}
+
+.about-para{
+  max-width: 700px;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.Proficient-title{
+  margin-top: 30px;
+  font-size: 32px;
+}
+
+.Proficients{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 85px;
+}
+
+.Proficient{
+  display: flex;
+  gap: 15px;
+}
+
+.up-arrow{
+  width: 31px;
+  height: 30px;
+  margin-top: 13px;
+}
+
+.Proficient-name{
+  color: white;
+  font-size: 20px;
+}
+
+@media (max-width: 768px){
+  .about-section{
+    max-width: 300px;
+  }
+  .pop-title{
+    font-size: 16px;
+  }
+
+  .pop-bold-title{
+    font-size: 37px;
+  }
+
+  .about-para{
+    max-width: 320px;
+  }
+
+  .Proficients{
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .Proficient{
+    min-width: 150px;
+    justify-content: space-between;
+  }
+}
+
+

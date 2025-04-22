@@ -1,0 +1,115 @@
+.video-card{
+  width: 1250px;
+  height: 560px;
+  border-radius: 15px;
+  border: 2px solid white;
+  margin-top: 70px;
+}
+
+.image-card{
+  width: 1220px;
+  height: 560px;
+  border-radius: 15px;
+  border: 2px solid white;
+  margin-top: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.left-arrow{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 120px;
+  left: 80px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: moveUpDown 2s ease-in-out infinite;
+}
+
+
+#contact-project-details{
+  min-width: 1250px;
+}
+
+.project-desc-section{
+  display: flex;
+  justify-content: space-between;
+  width: 1350px;
+  margin-left: 90px;
+}
+
+
+.project-name{
+  font-size: 35px;
+}
+
+.project-desc{
+  max-width: 550px;
+  margin-bottom: 30px;
+}
+
+.tech-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  row-gap: 20px;
+  max-width: 500px;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+  width: 90%;
+}
+
+.button{
+  border: none;
+  border-radius: 8px;
+  width: 135px;
+  height: 43px;
+  font-family: "Poppins";
+  font-weight: 300;
+  font-style: normal;
+  color: #ffffff;
+  font-size: 16px;
+  background-color: #2BCF7E;
+  cursor: pointer;
+}
+
+.button:hover{
+  background-color: #126139;
+}
+
+.green-hover:hover{
+  color: #2BCF7E;
+}
+
+.KeyFeauter{
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+.right-project-desc-section{
+  min-width: 600px;
+  max-width: 700px;
+}
+
+.left-project-desc-section{
+  min-width: 600px;
+
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

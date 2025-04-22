@@ -1,0 +1,82 @@
+
+.certificates-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Certificates-para{
+  max-width: 700px;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.certificates{
+  margin-top: 90px;
+  display: flex;
+  justify-content: space-between;
+  width: 1500px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.certificate-card{
+  width: 390px ;
+  min-width: 390px;
+  height: 350px;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(43, 207, 126, 0.1);
+}
+
+.certificate-image{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("/Assests/images/ecpc.png");
+  width: 100%;
+  height: 80%;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.certificate-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(43, 207, 126, 0.2);
+}
+
+.certificate-card-details{
+  position: absolute;
+  bottom: 0px;
+  background-color: #1a1919;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  border-radius: 0px 0px 10px 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.certificate-card-name{
+  color: white;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.certificate-card-desc{
+  color: white;
+  font-size: 14px;
+  margin-top: 0px;
+}
+
+.certificate-icon{
+  width: 33px;
+  height: 33px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#second-cert{
+  background-image: url("/Assests/images/cybersecurity.jpg");
+}

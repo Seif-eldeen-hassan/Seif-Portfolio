@@ -1,0 +1,17 @@
+  <div class="Portfolio-section" [ngClass]="{'center-text': centeredTitle }">
+    <h1 *ngIf="!EmptyProjects" class="pop-title port-title"> {{ProjectsType}} </h1>
+    <h1 *ngIf="!EmptyProjects" class="pop-bold-title look-title"> look what I did </h1>
+    <h1 *ngIf="!EmptyProjects"class="pop-pargraph Portfolio-par"> {{Portfolio_par}} </h1>
+    <div *ngIf="EmptyProjects"class="pop-bold-title empty-projects">   🛠️ Projects are currently under development. Stay tuned — they’ll be live soon! </div>
+    <div class="Portfolio">
+      <div class="Portfolio-card" *ngFor="let item of ProjectThumbnails let i = index"  [routerLink]="['/projects',ProjectsType, i+1 , ProjectNames[i] ]" [ngStyle]="{'background-image': 'url(' + item + ')'}">
+          <div class="portfolio-card-details">
+              <div class="portfolio-card-text">
+                <h1 class="portfolio-card-name pop-400"> {{ProjectNames[i]}}</h1>
+                <h1 class="portfolio-card-desc pop-300"> {{ProjectDesc[i]}}  </h1>
+              </div>
+              <img src="/Assests/images/Arrow.png" alt="" class="prot-icon">
+          </div>
+      </div>
+    </div>
+  </div>

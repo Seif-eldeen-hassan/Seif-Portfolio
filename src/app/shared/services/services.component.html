@@ -1,0 +1,12 @@
+<div class="services-section">
+  <h1 class="pop-title service-title"> Services </h1>
+  <h1 class="pop-bold-title ">Providing services </h1>
+  <p class="pop-pargraph service-para">{{ServicesDescription}}</p>
+  <div class="services">
+    <div class="service-card" *ngFor="let icon of ServiceIcons let i = index ">
+      <img [src]="icon" alt="" class="service-icon">
+      <h1 class="service-name pop-500"> {{ServiceNames[i]}} </h1>
+      <h1 class="pop-pargraph service-card-para"> {{ServiceDesc[i]}}</h1>
+    </div>
+  </div>
+</div>

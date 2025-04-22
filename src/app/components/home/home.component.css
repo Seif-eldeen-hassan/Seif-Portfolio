@@ -1,0 +1,191 @@
+
+
+.welcome-section{
+  padding-left: 50px;
+  display: flex;
+  gap: 150px;
+}
+
+#contact-home{
+  width: 1300px;
+}
+
+.profile-image{
+  width: 720px;
+  height: 800px;
+  background-image: url("/Assests/images/pexels-photosbycollis-3031397.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+  border-radius: 10px;
+}
+
+.welcome-title{
+  color: #2BCF7E;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+  margin-bottom: 0px;
+}
+
+.welcome-text{
+  margin-top: 140px;
+}
+
+.my-info{
+  margin-bottom: 100px;
+}
+
+.name{
+  font-family: "Poppins";
+  font-weight: 600;
+  font-style: normal;
+  color: white;
+  font-size: 103px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+
+.eldeen{
+  color: #2BCF7E !important;
+}
+
+.job{
+  font-size: 35px;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  margin-top: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #00FF99;
+  animation: typing 3s steps(30, end), blink .75s step-end infinite;
+
+}
+
+.projects-description{
+  font-size: 19px;
+  font-family: "Poppins";
+  font-weight: 300;
+  font-style: normal;
+  color: #D9D9D9;
+  max-width: 400px;
+}
+
+.view_protofolio{
+  display: flex;
+  gap: 10px;
+}
+
+.view_pro_text{
+  font-size: 20px;
+  font-family: "Poppins";
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+}
+
+.view_icon{
+  width: 40px;
+  height: 40px;
+  margin-top: 9px;
+  cursor: pointer;
+}
+
+.skills-section{
+  display: flex;
+  gap: 60px;
+}
+
+.hidden-content {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px){
+  .welcome-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    margin-left: -40px;
+  }
+
+  .profile-image{
+    width: 300px;
+    height: 300px;
+  }
+
+  .name{
+    font-size: 42px;
+  }
+
+  .job{
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .welcome-title{
+    font-size: 20px;
+  }
+
+  .projects-description{
+    font-size: 14px;
+  }
+
+  .my-info{
+    max-width: 340px !important;
+    margin-bottom: 20px;
+  }
+
+  .projects-description{
+    max-width: 270px !important;
+  }
+
+  .view_pro_text{
+    font-size: 16px;
+  }
+
+  .view_icon{
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+  }
+
+  .skills-image{
+    display: none;
+  }
+
+  #contact-home{
+    width: 300px;
+  }
+
+
+}
+
+

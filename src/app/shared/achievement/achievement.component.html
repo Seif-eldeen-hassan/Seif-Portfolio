@@ -1,0 +1,23 @@
+<div class="Achievement">
+  <h1 class="achievement-title"> Achievement </h1>
+  <div class="achievement-section">
+      <div class="left-ach-side">
+        <h1 class="best-projects"> Best of My Projects</h1>
+        <p class="ach-pargraph"> {{ AchDescription }} </p>
+        <div class="explore-bt">
+            <h1 class="pop-500 explore"> Explore More</h1>
+            <img src="/Assests/images/arrow_right_alt.png" class="explore-icon">
+        </div>
+      </div>
+
+      <div class="projects" >
+        <div class="project" *ngFor="let item of ProjectsTypes let i = index" [routerLink]="['/projects', ProjectsTypes[i] ]">
+            <div class="project-details">
+              <h1 class="project-category pop-400"> {{ProjectsTypes[i]}}</h1>
+              <h1 class="project-number pop-300"> {{ProjectsTypeQuan[i]}}</h1>
+            </div>
+            <img src="/Assests/images/arrow_outward.png" class="skill-icon project-icon">
+        </div>
+      </div>
+  </div>
+</div>

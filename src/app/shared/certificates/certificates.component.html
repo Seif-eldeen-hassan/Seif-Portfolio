@@ -1,0 +1,19 @@
+<div class="certificates-section">
+  <h1 class="pop-title"> Certificates </h1>
+  <h1 class="pop-bold-title"> Achievements Through Learning </h1>
+  <p class="pop-pargraph Certificates-para"> A collection of certifications that reflect my continuous learning, skill development, and participation in various technical programs and competitions.</p>
+
+  <div class="certificates">
+    <div class="certificate-card" *ngFor="let item of CertificatesImage let i = index">
+        <div class="certificate-image" [ngStyle]="{'background-image': 'url(' + item + ')'}"> </div>
+        <div class="certificate-card-details">
+          <div class="certificate-card-text">
+            <h1 class="certificate-card-name pop-400">{{CertificatesTitle[i]}}</h1>
+            <h1 class="certificate-card-desc pop-300"> {{'Form:   ' + CertificatesSource[i]}} </h1>
+          </div>
+          <img src="/Assests/images/Arrow.png" alt="" class="certificate-icon">
+        </div>
+    </div>
+  </div>
+
+</div>

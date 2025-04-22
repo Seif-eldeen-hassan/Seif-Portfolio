@@ -1,0 +1,12 @@
+<main id="main-page" *ngIf="!allSectionsLoaded"> <app-loader></app-loader>
+</main>
+<main id="main-page" *ngIf="allSectionsLoaded">
+  <div class="header-section">
+    <h1 class="header-title pop-400"> Let’s Build Something Great </h1>
+    <h1 class="header-bold-title pop-700">My <span class="sub-header-bold-title">Services</span></h1>
+    <p class="pop-pargraph header-para"> From ideas to execution — here’s how I bring value. Offering impactful digital solutions tailored to your needs</p>
+  </div>
+  <app-achievement [ProjectsTypeData]="achievementsData" ></app-achievement>
+  <app-services [servicesData]="ServicesData" ></app-services>
+  <app-get-in-touch [contactData]="ContactData" id="contact-services"></app-get-in-touch>
+</main>

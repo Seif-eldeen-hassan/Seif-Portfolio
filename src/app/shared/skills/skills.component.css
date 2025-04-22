@@ -1,0 +1,112 @@
+.skills-section{
+  display: flex;
+  gap: 60px;
+}
+
+.skills-image{
+  width: 780px;
+  height: 840p;
+}
+
+.skill-title{
+  font-size: 20px;
+  color: #2BCF7E;
+}
+
+.skill-name{
+  font-size: 15px;
+}
+.skills-bar{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.what-i-can-do{
+  font-size: 57px;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.skill-pargraph{
+  color: #D9D9D9;
+  font-size: 15px;
+  max-width: 500px;
+  margin-top: 0px;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #2BCF7E;
+  width: 0%;
+  transition: width 2.5s ease-in-out;
+}
+
+.percent-text{
+  color: #2BCF7E;
+  position: absolute;
+  font-size: 15px;
+  bottom: -30px;
+  display: none;
+}
+
+.skill{
+  font-size: 20px;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+  position: relative;
+}
+
+.skill-icon{
+  width: 35px;
+  height: 35px;
+  margin-top: 13px;
+}
+
+
+.profile-image{
+  width: 720px;
+  height: 800px;
+  background-image: url("/Assests/images/pexels-photosbycollis-3031397.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+  border-radius: 10px;
+}
+
+@media (max-width: 768px){
+  .skills{
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .skill-title{
+    text-align: center;
+  }
+
+  .what-i-can-do{
+    text-align: center;
+    font-size: 42px;
+  }
+
+  .skill-pargraph{
+    max-width: 300px;
+    text-align: center;
+    margin-left: 10px;
+  }
+
+}
+

@@ -1,0 +1,39 @@
+<header id="nav" >
+  <div class="logo">
+    <h1 class="seif"> Seif </h1>
+    <h1 class="eldeen"> Eldeen </h1>
+  </div>
+  <div class="tabs">
+    <div class="tab" routerLink="/home" routerLinkActive="active-bt"> Home </div>
+    <div class="tab" routerLink="/about" routerLinkActive="active-bt"> About </div>
+    <div class="tab" routerLink="/services" routerLinkActive="active-bt"> Services </div>
+    <div class="tab" routerLink="/projects" routerLinkActive="active-bt" [routerLinkActiveOptions]="{ exact: false }"> Projects+ </div>
+    <div class="tab" routerLink="/contact" routerLinkActive="active-bt"> Contact </div>
+  </div>
+  <img src="/Assests/images/output-onlinepngtools(19).png" alt="" class="hamburger" (click)="toggleSidebar()">
+  <div class="sidebar" [ngClass]="{'show': sidebarVisible}">
+    <i class="fa-solid fa-xmark" (click)="toggleSidebar()"></i>
+    <a class="side-tab pop-500" routerLink="/home" routerLinkActive="active-bt active-side-bar">Home</a>
+    <a class="side-tab pop-500" routerLink="/about" routerLinkActive="active-bt active-side-bar" >About</a>
+    <a class="side-tab pop-500" routerLink="/services" routerLinkActive="active-bt active-side-bar">Services</a>
+    <div class="projects">
+        <div class="main-projects">
+            <a class="projects-tab pop-500" routerLink="/projects" routerLinkActive="active-bt">Projects +</a>
+            <i class="fa-solid"
+            [ngClass]="ProjectsVisible ? 'fa-angle-up' : 'fa-angle-down'"
+            (click)="toggleProjectsTab()">
+            </i>
+        </div>
+         <div class="sub-projects" [ngClass]="{'show-projects': ProjectsVisible}" *ngIf="alldataLoaded" >
+            <div class="sub-project"  *ngFor="let item of ProjectsCategory">
+              <div class="sub-projects-tab pop-500" [routerLink]="['/projects',item]" routerLinkActive="active-bt">{{item}}</div>
+              <hr class="line">
+            </div>
+        </div>
+    </div>
+
+    <a class="side-tab pop-500" routerLink="/certificates" routerLinkActive="active-bt active-side-bar">Certificates </a>
+    <a class="side-tab pop-500" routerLink="/contact" routerLinkActive="active-bt active-side-bar">Contact</a>
+  </div>
+  <button class="download-cv-bt"> Download CV </button>
+</header>
