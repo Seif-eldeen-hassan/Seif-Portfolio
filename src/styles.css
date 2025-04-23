@@ -149,5 +149,15 @@ html,body{
   .main-cont{
     max-width: 300px;
   }
+  .header-title{
+    font-size: 20px;
+  }
+  .header-bold-title{
+    font-size: 45px;
+    margin-top: 30px;
+  }
+  .header-para{
+    max-width: 300px;
+  }
 }
 

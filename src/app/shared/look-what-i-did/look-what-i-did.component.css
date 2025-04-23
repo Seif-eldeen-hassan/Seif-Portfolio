@@ -82,6 +82,36 @@
   margin-left: 20px;
 }
 
+@media (max-width: 1200px) and (min-width: 780px){
+  .Portfolio-par{
+    max-width: 500px;
+    text-align: center;
+  }
+
+  .Portfolio{
+    max-width: 800px;
+    justify-content: center;
+    gap: 70px;
+  }
+  .look-title , .port-title{
+    text-align: center;
+  }
+
+  .Portfolio-section{
+    align-items: center;
+  }
+
+}
+
+@media (min-width: 1200px) and (max-width: 1700px){
+  .Portfolio{
+    max-width: 900px;
+    justify-content: center;
+    gap: 70px;
+  }
+
+}
+
 @media (max-width: 768px){
   .Portfolio-section{
     max-width: 300px;
@@ -100,6 +130,14 @@
     min-width: 300px;
     width: 300px;
     height: 300px;
+  }
+
+  .Portfolio-section{
+    align-items: center;
+  }
+
+  .Portfolio-par{
+    text-align: center;
   }
 
 }

@@ -40,6 +40,7 @@
  background-size: cover;
  background-repeat: no-repeat;
  border-radius: 10px;
+ transition: all 0.3s ease-in-out;
 }
 
 .education-section{
@@ -66,6 +67,7 @@
   background-repeat: no-repeat;
   border-radius: 10px;
   margin-top: 50px;
+  transition: all 0.3s ease-in-out;
 }
 
 
@@ -89,4 +91,158 @@
 
 #about-contact{
   min-width: 1350px;
+}
+
+
+@media (max-width: 1200px) and (min-width: 780px){
+  .about-me{
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-title{
+    font-size: 20px;
+  }
+  .section-bold-title{
+    font-size: 42px;
+  }
+  .who-am-i-para{
+    max-width: 550px;
+  }
+  .list-data{
+    max-width: 550px;
+  }
+  .profile-image{
+    margin-top: 70px;
+  }
+  .education-section{
+    flex-direction: column;
+    align-items: center;
+    max-width: 700px;
+  }
+
+  .education-uni-title{
+    font-size: 32px;
+    max-width: 550px;
+  }
+
+  .skills{
+    max-width: 1000px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+}
+
+@media (min-width: 1200px) and (max-width: 1500px){
+  .section-title{
+    font-size: 20px;
+  }
+  .section-bold-title{
+    font-size: 42px;
+  }
+  .who-am-i-para{
+    max-width: 550px;
+  }
+  .list-data{
+    max-width: 550px;
+  }
+  .about-me{
+    max-width: 1100px;
+  }
+  .education-uni-title{
+    font-size: 42px;
+    max-width: 650px;
+  }
+
+  .education-section{
+    max-width: 1100px;
+  }
+
+  .skills{
+    max-width: 1100px;
+  }
+
+  .skill{
+    max-width: 500px;
+  }
+
+  .university-image{
+    margin-top: 100px;
+  }
+
+}
+
+
+@media (max-width: 768px){
+  .about-me{
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-title{
+    font-size: 20px;
+  }
+  .left-section-about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-bold-title{
+    font-size: 42px;
+  }
+  .who-am-i-para{
+    max-width: 300px;
+  }
+
+  .list-data{
+    max-width: 300px;
+  }
+  .profile-image{
+    margin-top: 70px;
+    width: 300px;
+    height: 400px;
+  }
+
+  .education-section{
+    flex-direction: column;
+    align-items: center;
+    max-width: 700px;
+  }
+
+  .education-left-side{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .education-uni-title{
+    font-size: 32px;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .university-image{
+    width: 300px;
+    height: 220px;
+  }
+
+  .skills{
+    max-width: 300px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-section{
+    max-width: 300px;
+  }
+
+  .skills-bold-title{
+    font-size: 42px;
+  }
+
+  .skill{
+    max-width: 300px;
+  }
+
+
 }

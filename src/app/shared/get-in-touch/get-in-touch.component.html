@@ -15,7 +15,7 @@
         <h1 class="contact-details pop-300"> Email : </h1>
       </div>
       <div class="contact-data">
-        <h1 class="contact-details pop-300" *ngFor="let item of Emails"> {{item}}</h1>
+        <h1 class="contact-details pop-300" id="contact-info" *ngFor="let item of Emails"> {{item}}</h1>
       </div>
     </div>
     <div class="contact-card">
@@ -24,7 +24,7 @@
         <h1 class="contact-details pop-300"> Contact :</h1>
       </div>
       <div class="contact-data">
-          <h1 class="contact-details pop-300" *ngFor="let item of PhoneNumbers">  {{ '+' +item}} </h1>
+          <h1 class="contact-details pop-300" id="contact-info" *ngFor="let item of PhoneNumbers">  {{ '+' +item}} </h1>
       </div>
     </div>
     <div class="contact-card">
@@ -33,7 +33,7 @@
         <h1 class="contact-details pop-300"> Address :</h1>
       </div>
       <div class="contact-data">
-        <h1 class="contact-details pop-300" *ngFor="let item of Locations" >{{item}}</h1>
+        <h1 class="contact-details pop-300" id="contact-info" *ngFor="let item of Locations" >{{item}}</h1>
       </div>
     </div>
   </div>

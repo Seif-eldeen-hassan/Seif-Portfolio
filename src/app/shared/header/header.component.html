@@ -7,8 +7,38 @@
     <div class="tab" routerLink="/home" routerLinkActive="active-bt"> Home </div>
     <div class="tab" routerLink="/about" routerLinkActive="active-bt"> About </div>
     <div class="tab" routerLink="/services" routerLinkActive="active-bt"> Services </div>
-    <div class="tab" routerLink="/projects" routerLinkActive="active-bt" [routerLinkActiveOptions]="{ exact: false }"> Projects+ </div>
-    <div class="tab" routerLink="/contact" routerLinkActive="active-bt"> Contact </div>
+    <div class="multiple-child-tab">
+      <div class="main-tab-title">
+        <div class="tab" routerLink="/projects" routerLinkActive="active-bt" [routerLinkActiveOptions]="{ exact: false }" > Projects</div>
+        <i class="fa-solid fa-angle-down child-tab-arrow" (click)="DisplaySubProjectsTabs()"></i>
+      </div>
+      <div class="sub-tabs" [ngClass]="{'show-sub-tabs': ProjectsSubTabs}">
+        <div class="sub-tab-card" *ngFor="let item of ProjectsCategory">
+          <div class="tab sub-tab" [routerLink]="['/projects',item]" routerLinkActive="active-bt"> {{item}}</div>
+          <hr class="line sub-tab-line">
+        </div>
+      </div>
+    </div>
+    <div class="multiple-child-tab">
+      <div class="main-tab-title">
+        <div class="tab" routerLink="/explore" routerLinkActive="active-bt" [routerLinkActiveOptions]="{ exact: false }" > Explore </div>
+        <i class="fa-solid fa-angle-down child-tab-arrow" (click)="DisplayExploreSubTabs()"></i>
+      </div>
+      <div class="sub-tabs" [ngClass]="{'show-sub-tabs': ExploreSubTabs}">
+        <div class="sub-tab-card">
+          <div class="tab sub-tab" [routerLink]="'/explore/certificates'" routerLinkActive="active-bt"> Certificates </div>
+          <hr class="line sub-tab-line">
+        </div>
+        <div class="sub-tab-card">
+          <div class="tab sub-tab" [routerLink]="'/explore/contact'" routerLinkActive="active-bt"> Contact </div>
+          <hr class="line sub-tab-line">
+        </div>
+        <div class="sub-tab-card">
+          <div class="tab sub-tab" [routerLink]="'/explore/feedback'" routerLinkActive="active-bt"> Feedback </div>
+          <hr class="line sub-tab-line">
+        </div>
+      </div>
+    </div>
   </div>
   <img src="/Assests/images/output-onlinepngtools(19).png" alt="" class="hamburger" (click)="toggleSidebar()">
   <div class="sidebar" [ngClass]="{'show': sidebarVisible}">
@@ -18,7 +48,7 @@
     <a class="side-tab pop-500" routerLink="/services" routerLinkActive="active-bt active-side-bar">Services</a>
     <div class="projects">
         <div class="main-projects">
-            <a class="projects-tab pop-500" routerLink="/projects" routerLinkActive="active-bt">Projects +</a>
+            <a class="projects-tab pop-500" routerLink="/projects" routerLinkActive="active-bt" [routerLinkActiveOptions]="{ exact: false }">Projects +</a>
             <i class="fa-solid"
             [ngClass]="ProjectsVisible ? 'fa-angle-up' : 'fa-angle-down'"
             (click)="toggleProjectsTab()">

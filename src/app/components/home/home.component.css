@@ -1,13 +1,8 @@
-
-
 .welcome-section{
   padding-left: 50px;
   display: flex;
   gap: 150px;
-}
-
-#contact-home{
-  width: 1300px;
+  z-index: 0;
 }
 
 .profile-image{
@@ -20,6 +15,7 @@
   mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
   -webkit-mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
   border-radius: 10px;
+  transition: all 1s ease-in-out;
 }
 
 .welcome-title{
@@ -127,6 +123,99 @@
   }
 }
 
+@media (max-width: 1200px) and (min-width: 780px) {
+  .welcome-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    margin-left: -20PX;
+    margin-top: 0px;
+    row-gap: 0px;
+  }
+
+  .profile-image{
+    width: 450px;
+    height: 550px;
+  }
+
+
+  .my-info{
+    margin-bottom: 50px;
+  }
+
+  .welcome-title{
+    font-size: 26px;
+  }
+
+  .name{
+    font-size: 57px;
+  }
+
+  .job{
+    font-size: 18px;
+  }
+
+  .skills-image{
+    display: none;
+
+  }
+
+  #contact-home{
+    width: 300px;
+  }
+
+
+
+}
+
+ @media (min-width: 1200px) and (max-width: 1700px) {  /*from zoom 110  to zoom 160 */
+    .profile-image{
+      width: 550px;
+      height: 650px;
+    }
+
+    .welcome-text{
+      max-width: 500px;
+
+    }
+
+    .my-info{
+      margin-bottom: 50px;
+    }
+
+    .welcome-title{
+      font-size: 26px;
+    }
+
+    .name{
+      font-size: 57px;
+    }
+
+    .job{
+      font-size: 18px;
+    }
+
+    .projects-description{
+      font-size: 16px;
+    }
+
+    .view_pro_text{
+      font-size: 16px;
+    }
+
+    #view-portfolio-icon{
+      width: 25px;
+      height: 25px;
+      margin-top: 11px;
+    }
+
+    #contact-home{
+      width: 300px;
+    }
+
+}
+
 @media (max-width: 768px){
   .welcome-section{
     display: flex;
@@ -134,6 +223,7 @@
     align-items: center;
     gap: 0px;
     margin-left: -40px;
+
   }
 
   .profile-image{

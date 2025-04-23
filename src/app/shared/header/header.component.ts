@@ -14,6 +14,8 @@ import { SheetService } from '../../shared/sheet.service';
 export class HeaderComponent {
   sidebarVisible = false;
   ProjectsVisible = false;
+  ProjectsSubTabs = false;
+  ExploreSubTabs = false;
   alldataLoaded = false;
   AchievementsData: any[] = [];
   ProjectsCategory: any[] = [];
@@ -27,6 +29,28 @@ export class HeaderComponent {
   toggleProjectsTab() {
     this.ProjectsVisible = !this.ProjectsVisible;
   }
+
+  DisplaySubProjectsTabs(){
+    this.ProjectsSubTabs = !this.ProjectsSubTabs;
+    this.ExploreSubTabs = false;
+    if (this.ProjectsSubTabs) {
+      setTimeout(() => {
+        this.ProjectsSubTabs = false;
+      }, 5000);
+    }
+  }
+
+  DisplayExploreSubTabs() {
+    this.ExploreSubTabs = !this.ExploreSubTabs;
+    this.ProjectsSubTabs = false;
+
+    if (this.ExploreSubTabs) {
+      setTimeout(() => {
+        this.ExploreSubTabs = false;
+      }, 5000);
+    }
+  }
+
 
    ngOnInit() {
       forkJoin({

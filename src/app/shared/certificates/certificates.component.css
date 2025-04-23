@@ -18,6 +18,7 @@
   width: 1500px;
   flex-wrap: wrap;
   gap: 20px;
+  row-gap: 40px;
 }
 
 .certificate-card{
@@ -79,4 +80,60 @@
 
 #second-cert{
   background-image: url("/Assests/images/cybersecurity.jpg");
+}
+
+@media (max-width: 1200px) and (min-width: 780px){
+  .certificates{
+    max-width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .certificates-title{
+    font-size: 42px;
+  }
+  .certificate-card{
+    max-width: 300px ;
+    min-width: 300px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .certificate-card-details{
+    max-width: 261px ;
+  }
+
+}
+
+@media (min-width: 1200px) and (max-width: 1500px){
+  .certificates{
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 768px){
+  .certificates-section{
+    max-width: 300px;
+  }
+  .certificates-title{
+    font-size: 42px;
+    text-align: center;
+  }
+
+  .certificates{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .certificate-card{
+    max-width: 300px ;
+    min-width: 300px;
+    width: 300px;
+    height: 290px;
+  }
+
+  .certificate-card-details{
+    max-width: 261px ;
+  }
 }

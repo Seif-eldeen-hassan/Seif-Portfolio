@@ -6,6 +6,8 @@
 .contact-section{
   display: flex;
   justify-content: space-between;
+  max-width: 1300px;
+  min-width: 1200px;
 }
 
 .contact-icon{
@@ -69,10 +71,29 @@
   margin-top: 2px;
 }
 
+@media (max-width: 1200px) and (min-width: 780px){
+  .contact-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1700px){
+  .contact-section{
+    max-width: 1000px;
+    min-width: 1000px;
+    justify-content: space-between;
+  }
+  .contact-pargraph{
+    max-width: 500px;
+  }
+}
+
 
 @media (max-width: 768px){
   .contact-section{
-    max-width: 300px;
+    max-width: 300px !important;
     flex-direction: column;
     align-items: center;
   }
@@ -84,6 +105,7 @@
 
   .contact-details{
     max-width: 100px;
+    text-align: center;
   }
 
   .contact-card{
@@ -92,12 +114,16 @@
   }
 
   .contact-data{
-    width: 300px;
+    width: 300px ;
   }
 
+  #contact-info{
+    text-align: center;
+  }
 
-
-
+  .left-contact{
+    max-width: 300px;
+  }
 
 }
 

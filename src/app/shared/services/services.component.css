@@ -45,6 +45,18 @@
   margin-bottom: 10px;
 }
 
+@media (max-width: 1200px) and (min-width: 780px){
+  .services{
+    max-width: 670px;
+  }
+
+  .service-card{
+    max-width: 300px !important;
+    min-width: 300px;
+    width: 300px;
+  }
+}
+
 @media (max-width: 768px){
   .pop-bold-title{
     text-align: center;

@@ -10,8 +10,8 @@
 
   <div class="about-me">
     <div class="left-section-about">
-      <h1 class="pop-title"> Get to Know Me </h1>
-      <h1 class="pop-bold-title "> Who Am I ?</h1>
+      <h1 class="pop-title section-title"> Get to Know Me </h1>
+      <h1 class="pop-bold-title section-bold-title"> Who Am I ?</h1>
       <p class="who-am-i-para pop-pargraph">{{WhoAmIDescription}}</p>
       <ul class="list">
         <li class="pop-pargraph list-data " *ngFor="let item of WhoAmIList"> {{item}} </li>
@@ -22,7 +22,7 @@
 
   <div class="education-section">
     <div class="education-left-side">
-      <h1 class="pop-title"> Education & Learning </h1>
+      <h1 class="pop-title section-title"> Education & Learning </h1>
       <h1 class="pop-bold-title education-uni-title "> Cairo University, Computer Science & Artificial Intelligence</h1>
       <p class="pop-pargraph who-am-i-para"> {{EducationDescription}}</p>
       <ul class="list">
@@ -34,16 +34,16 @@
 
   <div class="skills-section">
       <h1 class="pop-title"> My Skills </h1>
-      <h1 class="pop-bold-title"> Skills in action </h1>
+      <h1 class="pop-bold-title skills-bold-title"> Skills in action </h1>
       <div class="skills">
           <div class="skill" *ngFor="let item of SkillNames let i = index">
             <h1 class="pop-title">{{item}} </h1>
             <ul class="skill-list">
-              <li class="pop-pargraph"> {{SkillDesc[i]}}</li>
+              <li class="pop-pargraph skill-description"> {{SkillDesc[i]}}</li>
             </ul>
           </div>
       </div>
   </div>
   <app-certificates [certificatesData]="CertificatesData"></app-certificates>
-  <app-get-in-touch [contactData]="ContactData" id="about-contact"> </app-get-in-touch>
+  <app-get-in-touch [contactData]="ContactData"> </app-get-in-touch>
 </main>

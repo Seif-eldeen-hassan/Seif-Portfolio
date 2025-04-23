@@ -6,10 +6,10 @@
         <p class="ach-pargraph"> {{ AchDescription }} </p>
         <div class="explore-bt">
             <h1 class="pop-500 explore"> Explore More</h1>
-            <img src="/Assests/images/arrow_right_alt.png" class="explore-icon">
+            <img src="/Assests/images/arrow_right_alt.png" routerLink="/projects" class="explore-icon">
         </div>
       </div>
-
+      
       <div class="projects" >
         <div class="project" *ngFor="let item of ProjectsTypes let i = index" [routerLink]="['/projects', ProjectsTypes[i] ]">
             <div class="project-details">
