@@ -1,10 +1,11 @@
 import { NgFor } from '@angular/common';
 import { Component ,Input } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-get-in-touch',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor,RouterModule],
   templateUrl: './get-in-touch.component.html',
   styleUrl: './get-in-touch.component.css'
 })

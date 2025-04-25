@@ -1,3 +1,18 @@
 #projects-contact{
   min-width: 1240px;
 }
+
+
+@media (max-width: 768px){
+  #main-page{
+    gap: 90px;
+  }
+
+}
+
+@media (max-width: 1200px) and (min-width: 780px){
+  #main-page{
+    gap: 90px;
+  }
+
+}

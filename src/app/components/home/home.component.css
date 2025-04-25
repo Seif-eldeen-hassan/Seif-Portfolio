@@ -3,6 +3,11 @@
   display: flex;
   gap: 150px;
   z-index: 0;
+
+}
+
+#contact-home{
+  width: 1300px;
 }
 
 .profile-image{
@@ -78,7 +83,7 @@
 
 .view_protofolio{
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
 
 .view_pro_text{
@@ -94,6 +99,7 @@
   height: 40px;
   margin-top: 9px;
   cursor: pointer;
+  animation: moveRightLeft 2s ease-in-out infinite;
 }
 
 .skills-section{
@@ -120,6 +126,18 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes moveRightLeft {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 
@@ -158,12 +176,12 @@
 
   .skills-image{
     display: none;
-
   }
 
-  #contact-home{
-    width: 300px;
+  .welcome-text{
+    margin-top: 70px;
   }
+
 
 
 
@@ -210,9 +228,10 @@
       margin-top: 11px;
     }
 
-    #contact-home{
-      width: 300px;
+    .skills-image{
+      display: none;
     }
+
 
 }
 
@@ -223,7 +242,12 @@
     align-items: center;
     gap: 0px;
     margin-left: -40px;
+    row-gap: 0px;
 
+  }
+
+  .welcome-text{
+    margin-top: 60px;
   }
 
   .profile-image{

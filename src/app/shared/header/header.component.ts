@@ -33,22 +33,20 @@ export class HeaderComponent {
   DisplaySubProjectsTabs(){
     this.ProjectsSubTabs = !this.ProjectsSubTabs;
     this.ExploreSubTabs = false;
-    if (this.ProjectsSubTabs) {
-      setTimeout(() => {
-        this.ProjectsSubTabs = false;
-      }, 5000);
-    }
   }
 
   DisplayExploreSubTabs() {
     this.ExploreSubTabs = !this.ExploreSubTabs;
     this.ProjectsSubTabs = false;
+  }
 
-    if (this.ExploreSubTabs) {
-      setTimeout(() => {
-        this.ExploreSubTabs = false;
-      }, 5000);
-    }
+  mouse_leave_projects(){
+    this.ProjectsSubTabs = false;
+
+  }
+
+  mouse_leave_explore(){
+    this.ExploreSubTabs = false
   }
 
 

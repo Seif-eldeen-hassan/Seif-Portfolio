@@ -1,8 +1,8 @@
 <main id="main-page" *ngIf="!allSectionsLoaded"> <app-loader></app-loader>
 </main>
 <main id="main-page" *ngIf="allSectionsLoaded">
-  <img src="/Assests/images/left-arrow.png" alt="" class="left-arrow" [routerLink]="['/projects',Projectcategory]" >
-  <div class="header-section">
+  <div class="header-section" id="head">
+    <img src="/Assests/images/left-arrow.png" alt="" class="left-arrow" [routerLink]="['/projects',Projectcategory]" >
     <h1 class="header-title pop-400"> {{ProjectType}}</h1>
     <h1 class="header-bold-title pop-700">  {{ProjectName}} </h1>
     <p class="pop-pargraph header-para"> {{ProjectTitleDesc}}  </p>
@@ -11,23 +11,23 @@
   </div>
   <div class="project-desc-section">
     <div class="left-project-desc-section">
-      <h1 class="pop-title"> Description</h1>
+      <h1 class="pop-title p-title"> Description</h1>
       <h1 class="pop-bold-title project-name"> {{ProjectName}} </h1>
       <p class="pop-pargraph project-desc"> {{ProjectDesc}} </p>
-      <h1 class="pop-title"> Technology Used</h1>
+      <h1 class="pop-title p-title"> Technology Used</h1>
       <ul class="tech-list">
         <li class="pop-pargraph green-hover" *ngFor="let item of TechUsedData"> {{item}}</li>
       </ul>
     </div>
     <div class="right-project-desc-section">
-      <h1 class="pop-title"> Key Features </h1>
-      <ul>
+      <h1 class="pop-title p-title"> Key Features </h1>
+      <ul class="key-feature-list">
         <li class="pop-pargraph green-hover KeyFeauter" *ngFor="let item of KeyFeautersData"> {{item}}</li>
       </ul>
-      <div class="buttons">
+      <!-- <div class="buttons">
         <a [href]="ProjectLiveDemo" *ngIf="IsLiveDemo" target="_blank" ><button id="live-demo-bt" class="button"> Live Demo </button></a>
         <a [href]="ProjectGithubCode"  *ngIf="!IsPrivateCode" target="_blank"><button id="github-code-bt" class="button" > Github Code </button></a>
-      </div>
+      </div> -->
 
     </div>
   </div>

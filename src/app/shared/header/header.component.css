@@ -10,7 +10,7 @@
   width: 94.1%;
   border-bottom: 1px solid #2bcf7d2f;
   transition: border-bottom 0.3s ease;
-  z-index: 1;
+  z-index: 7;
 }
 .logo{
   display: flex;
@@ -250,6 +250,11 @@
 
 .line{
   border: 0.2px solid rgba(59, 59, 59, 0.253);
+}
+
+#icons-side-bar{
+  margin-top: 30px;
+  justify-content: center;
 }
 
 

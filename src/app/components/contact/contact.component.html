@@ -1,0 +1,45 @@
+<main id="main-page" *ngIf="!allSectionsLoaded"> <app-loader></app-loader>
+</main>
+<main id="main-page" *ngIf="allSectionsLoaded"  #topSection>
+  <div class="header-section">
+    <h1 class="header-title pop-400"> Step Into My Inbox </h1>
+    <h1 class="header-bold-title pop-700">Contact <span class="sub-header-bold-title">Me</span></h1>
+    <p class="pop-pargraph header-para"> Have something to share, ask, or create together? I’d love to hear from you — drop a message anytime! </p>
+    <img src="/Assests/images/left-arrow.png" alt="" class="left-arrow" [ngClass]="{'none' : !MessageSent}" (click)="GoBackBt()">
+  </div>
+  <div class="contact-box">
+    <form id="form" (submit)="sendEmail($event)" [ngClass]="{'none' : MessageSent}">
+        <div class="input-box">
+          <h1 class="input-title pop-400"> Name </h1>
+          <input type="text" name="name" class="input pop-400" placeholder="Your Name" required>
+        </div>
+        <div class="input-box">
+          <h1 class="input-title pop-400"> Email </h1>
+          <input type="email"  name="email" class="input pop-400" placeholder="Your Email Address" required>
+        </div>
+        <div class="input-box">
+          <h1 class="input-title pop-400"> Subject </h1>
+          <input type="text" class="input pop-400" name="subject" placeholder="What's this message about?" required>
+        </div>
+        <div class="input-box">
+          <h1 class="input-title pop-400"> Message </h1>
+          <textarea  id="message-body"  name="message" class="input pop-400" placeholder="Your message here...." required></textarea>
+        </div>
+            <button class="send-bt pop-400" type="submit">
+            <div class="inner-submit-bt">
+                <i class="fa-solid fa-paper-plane" *ngIf="!sending"></i>
+                <div class="loader" id="sending-loader" *ngIf="sending"></div>
+                <h1 class="send-text pop-400">{{send_text}}</h1>
+            </div>
+            </button>
+    </form>
+    <div class="message-sent" [ngClass]="{'none' : !MessageSent}">
+      <img src="/Assests/images/Thankyou-iconV2.png" alt="" class="thanks-icon">
+      <div class="message-text">
+        <h1 class="pop-bold-title thanks-title"> Thank You! </h1>
+        <h1 class="pop-title submit-done">Your Submission has been received</h1>
+      </div>
+    </div>
+  </div>
+  <app-get-in-touch [contactData]="ContactData" ></app-get-in-touch>
+</main>

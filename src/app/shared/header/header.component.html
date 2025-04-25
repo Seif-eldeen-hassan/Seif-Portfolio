@@ -12,9 +12,9 @@
         <div class="tab" routerLink="/projects" routerLinkActive="active-bt" [routerLinkActiveOptions]="{ exact: false }" > Projects</div>
         <i class="fa-solid fa-angle-down child-tab-arrow" (click)="DisplaySubProjectsTabs()"></i>
       </div>
-      <div class="sub-tabs" [ngClass]="{'show-sub-tabs': ProjectsSubTabs}">
+      <div class="sub-tabs"  (mouseleave)="mouse_leave_projects()" [ngClass]="{'show-sub-tabs': ProjectsSubTabs}">
         <div class="sub-tab-card" *ngFor="let item of ProjectsCategory">
-          <div class="tab sub-tab" [routerLink]="['/projects',item]" routerLinkActive="active-bt"> {{item}}</div>
+          <div class="tab sub-tab" [routerLink]="['/projects',item]" routerLinkActive="active-bt" (click)="DisplaySubProjectsTabs()"> {{item}}</div>
           <hr class="line sub-tab-line">
         </div>
       </div>
@@ -24,17 +24,13 @@
         <div class="tab" routerLink="/explore" routerLinkActive="active-bt" [routerLinkActiveOptions]="{ exact: false }" > Explore </div>
         <i class="fa-solid fa-angle-down child-tab-arrow" (click)="DisplayExploreSubTabs()"></i>
       </div>
-      <div class="sub-tabs" [ngClass]="{'show-sub-tabs': ExploreSubTabs}">
+      <div class="sub-tabs" (mouseleave)="mouse_leave_explore()" [ngClass]="{'show-sub-tabs': ExploreSubTabs}">
         <div class="sub-tab-card">
-          <div class="tab sub-tab" [routerLink]="'/explore/certificates'" routerLinkActive="active-bt"> Certificates </div>
+          <div class="tab sub-tab" [routerLink]="'/certificates'" routerLinkActive="active-bt"> Certificates </div>
           <hr class="line sub-tab-line">
         </div>
         <div class="sub-tab-card">
-          <div class="tab sub-tab" [routerLink]="'/explore/contact'" routerLinkActive="active-bt"> Contact </div>
-          <hr class="line sub-tab-line">
-        </div>
-        <div class="sub-tab-card">
-          <div class="tab sub-tab" [routerLink]="'/explore/feedback'" routerLinkActive="active-bt"> Feedback </div>
+          <div class="tab sub-tab" routerLink="/explore/contact" routerLinkActive="active-bt"> Contact </div>
           <hr class="line sub-tab-line">
         </div>
       </div>
@@ -43,12 +39,12 @@
   <img src="/Assests/images/output-onlinepngtools(19).png" alt="" class="hamburger" (click)="toggleSidebar()">
   <div class="sidebar" [ngClass]="{'show': sidebarVisible}">
     <i class="fa-solid fa-xmark" (click)="toggleSidebar()"></i>
-    <a class="side-tab pop-500" routerLink="/home" routerLinkActive="active-bt active-side-bar">Home</a>
-    <a class="side-tab pop-500" routerLink="/about" routerLinkActive="active-bt active-side-bar" >About</a>
-    <a class="side-tab pop-500" routerLink="/services" routerLinkActive="active-bt active-side-bar">Services</a>
+    <a class="side-tab pop-500" routerLink="/home" routerLinkActive="active-bt active-side-bar" (click)="toggleSidebar()" >Home</a>
+    <a class="side-tab pop-500" routerLink="/about" routerLinkActive="active-bt active-side-bar" (click)="toggleSidebar()"  >About</a>
+    <a class="side-tab pop-500" routerLink="/services" routerLinkActive="active-bt active-side-bar" (click)="toggleSidebar()" >Services</a>
     <div class="projects">
         <div class="main-projects">
-            <a class="projects-tab pop-500" routerLink="/projects" routerLinkActive="active-bt" [routerLinkActiveOptions]="{ exact: false }">Projects +</a>
+            <a class="projects-tab pop-500" routerLink="/projects" routerLinkActive="active-bt" [routerLinkActiveOptions]="{ exact: false }" (click)="toggleSidebar()">Projects +</a>
             <i class="fa-solid"
             [ngClass]="ProjectsVisible ? 'fa-angle-up' : 'fa-angle-down'"
             (click)="toggleProjectsTab()">
@@ -56,14 +52,20 @@
         </div>
          <div class="sub-projects" [ngClass]="{'show-projects': ProjectsVisible}" *ngIf="alldataLoaded" >
             <div class="sub-project"  *ngFor="let item of ProjectsCategory">
-              <div class="sub-projects-tab pop-500" [routerLink]="['/projects',item]" routerLinkActive="active-bt">{{item}}</div>
+              <div class="sub-projects-tab pop-500" [routerLink]="['/projects',item]" routerLinkActive="active-bt" (click)="toggleSidebar()">{{item}}</div>
               <hr class="line">
             </div>
         </div>
     </div>
 
-    <a class="side-tab pop-500" routerLink="/certificates" routerLinkActive="active-bt active-side-bar">Certificates </a>
-    <a class="side-tab pop-500" routerLink="/contact" routerLinkActive="active-bt active-side-bar">Contact</a>
+    <a class="side-tab pop-500" routerLink="/certificates" routerLinkActive="active-bt active-side-bar" (click)="toggleSidebar()">Certificates </a>
+    <a class="side-tab pop-500" routerLink="/explore/contact" routerLinkActive="active-bt active-side-bar" (click)="toggleSidebar()">Contact</a>
+    <div class="icons" id="icons-side-bar">
+      <a href="https://api.whatsapp.com/send/?phone=201010272547&text&type=phone_number&app_absent=0" target="_blank" > <i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://www.linkedin.com/in/seif-eldeen-a3ba62300/" target="_blank"> <i class="fa-brands fa-linkedin"> </i></a>
+      <a href="https://github.com/Seif-eldeen-hassan" target="_blank"> <i class="fa-brands fa-square-github"></i> </a>
+      <a href="mailto:seifeldeen568@gmail.com" target="_blank"> <i class="fa-solid fa-envelope"></i> </a>
+    </div>
   </div>
   <button class="download-cv-bt"> Download CV </button>
 </header>

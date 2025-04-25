@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 .contact-me{
@@ -38,53 +39,20 @@
   color: white;
 }
 
-#whats{
-  background-image: url("/Assests/images/white-whats.png");
+.fa-brands ,.fa-solid{
+  font-size: 24px;
+  color: white;
+  transition: all 0.3s ease-in-out;
 }
 
-#whats:hover {
-  width: 25px;
-  height: 25px;
-  background-image: url("/Assests/images/green-whats.png");
-  background-size: cover;
-  transition: width 0.3s ease, height 0.3s ease;
-}
-
-#linkedin{
-  background-image: url("/Assests/images/white-linkedin.png");
-}
-
-#linkedin:hover {
-  width: 25px;
-  height: 25px;
-  background-image: url("/Assests/images/green-linkedin.png");
-  background-size: cover;
-  transition: width 0.3s ease, height 0.3s ease;
+.fa-brands:hover ,.fa-solid:hover{
+  font-size: 28px;
+  color: #2BCF7E;
 }
 
 
-#github{
-  background-image: url("/Assests/images/white-github.png");
-}
-
-#github:hover {
-  width: 25px;
-  height: 25px;
-  background-image: url("/Assests/images/green-github.png");
-  background-size: cover;
-  transition: width 0.3s ease, height 0.3s ease;
-}
 
 
-#mail{
-  background-image: url("/Assests/images/white-mail.png");
-}
 
-#mail:hover {
-  width: 25px;
-  height: 25px;
-  background-image: url("/Assests/images/green-mail.png");
-  background-size: cover;
-  transition: width 0.3s ease, height 0.3s ease;
-}
+
 

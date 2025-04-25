@@ -58,7 +58,7 @@
 }
 
 .project{
-  background-color: RGB(251, 243, 247,0.1);
+  background-color: #1a1919;
   width: 450px;
   height: 90px;
   border-radius: 10px;
@@ -104,6 +104,7 @@
   height: 35px;
   margin-top: 13px;
 }
+
 
 
 

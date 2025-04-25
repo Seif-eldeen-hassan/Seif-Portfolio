@@ -4,6 +4,7 @@
   border-radius: 15px;
   border: 2px solid white;
   margin-top: 70px;
+  transition: all 0.3s ease-in-out;
 }
 
 .image-card{
@@ -20,8 +21,8 @@
   width: 50px;
   height: 50px;
   position: absolute;
-  top: 120px;
-  left: 80px;
+  top: 20px;
+  left: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
   animation: moveUpDown 2s ease-in-out infinite;
@@ -102,6 +103,10 @@
 
 }
 
+#head{
+  position: relative;
+}
+
 @keyframes moveUpDown {
   0% {
     transform: translateY(0);
@@ -113,3 +118,77 @@
     transform: translateY(0);
   }
 }
+
+@media (max-width: 1200px) and (min-width: 780px){   /* Tablet View */
+  .video-card{
+    width: 700px;
+  }
+
+  .project-desc-section{
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+}
+
+@media (min-width: 1200px) and (max-width: 1700px){
+  .video-card{
+    width: 1100px;
+  }
+
+  .project-desc-section{
+    width: 1100px;
+  }
+
+  .KeyFeauter{
+    max-width: 400px;
+    min-width: 400px;
+    width: 400px;
+  }
+
+}
+
+@media (max-width: 768px){
+  .video-card{
+    width: 300px;
+    height: 220px;
+  }
+
+  .project-desc-section{
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    overflow: hidden;
+    margin-left: 0px;
+  }
+
+  .project-desc , .tech-list , .KeyFeauter , .project-name , .project-desc-section , .p-title , .key-feature-list , .right-project-desc-section , .left-project-desc-section{
+    max-width: 300px;
+    width: 300px;
+    min-width: 300px;
+  }
+
+  .green-hover{
+    max-width: 250px;
+    min-width: 250px;
+    width: 250px;
+  }
+
+
+  .tech-list{
+    flex-wrap: wrap;
+  }
+
+  .left-arrow{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+
+  }
+
+
+}
+
