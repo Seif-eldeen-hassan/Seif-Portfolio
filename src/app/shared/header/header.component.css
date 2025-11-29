@@ -15,6 +15,7 @@
 .logo{
   display: flex;
   gap: 4px;
+  cursor: pointer;
 }
 
 .logo h1{

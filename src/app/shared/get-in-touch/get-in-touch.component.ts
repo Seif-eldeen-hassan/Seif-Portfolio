@@ -25,4 +25,10 @@ export class GetInTouchComponent {
            this.Locations[i] = this.contactData[i+1][3];
        }
    }
+   scroll_to_contact() {
+    const element = document.querySelector('.contact-section');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }

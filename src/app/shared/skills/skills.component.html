@@ -1,8 +1,10 @@
 
   <div class="skills" #skillsSection>
-    <h1 class="skill-title pop-300"> My Skills</h1>
-    <h1 class="what-i-can-do pop-500">What I Can Do?</h1>
-    <p class="skill-pargraph pop-300">{{SkillsDescription}}</p>
+    <div class="right-skill-section">
+        <h1 class="skill-title pop-300"> My Skills</h1>
+        <h1 class="what-i-can-do pop-500">What I Can Do?</h1>
+        <p class="skill-pargraph pop-300">{{SkillsDescription}}</p>
+    </div>
     <div class="skills-bar">
         <div class="skill"  *ngFor="let item of SkillsNames let i = index">
           <h1 class="skill-name pop-400"> {{SkillsNames[i]}} </h1>

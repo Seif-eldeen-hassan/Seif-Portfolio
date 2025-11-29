@@ -1,9 +1,10 @@
-<main id="main-page" *ngIf="!allSectionsLoaded"> <app-loader></app-loader>
-</main>
+<main id="main-page" *ngIf="!allSectionsLoaded"> <app-loader></app-loader> </main>
 <main id="main-page" *ngIf="allSectionsLoaded">
   <div class="main-cont">
+    <div class="contact-now-arrow" (click)="scroll_to_contact()"> </div>
       <div class="welcome-section">
           <div class="profile-image" [ngStyle]="{'background-image': 'url(' + FirstPersonalImage + ')'}" > </div>
+          <div class="signature"></div>
           <div class="welcome-text">
             <div class="my-info">
               <h1 class="welcome-title"> Hello, I am </h1>
@@ -22,10 +23,7 @@
       </div>
       <app-about-section [AboutData]="aboutData"></app-about-section>
       <app-achievement [ProjectsTypeData]="achievementsData"></app-achievement>
-      <div class="skills-section">
-        <div class="profile-image skills-image" [ngStyle]="{'background-image': 'url(' + SecondPersonalImage + ')'}"> </div>
-        <app-skills [SkillsData]="MySkillsData"></app-skills>
-      </div>
+      <app-skills [SkillsData]="MySkillsData"></app-skills>
       <app-services [servicesData]="ServicesData"></app-services>
       <app-look-what-i-did [portfolioData]="PortfolioData" [centeredTitle]="CenteredTitle"></app-look-what-i-did>
       <app-get-in-touch [contactData]="ContactData" ></app-get-in-touch>

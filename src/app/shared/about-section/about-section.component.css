@@ -58,6 +58,11 @@
   .Proficients{
     flex-direction: column;
     gap: 10px;
+    display: none;
+  }
+  
+  .Proficient-title{
+    display: none;
   }
 
   .Proficient{

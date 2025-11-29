@@ -1,6 +1,6 @@
 
 .contact-pargraph{
-  max-width: 650px;
+  max-width: 550px;
 }
 
 .contact-section{
@@ -60,6 +60,8 @@
   width: 40px;
   height: 40px;
   cursor: pointer;
+  animation: moveRightLeft 2s ease-in-out infinite;
+
 }
 
 .logo-title-cont{
@@ -70,6 +72,19 @@
 .contact-details{
   margin-top: 2px;
 }
+
+@keyframes moveRightLeft {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 
 @media (max-width: 1200px) and (min-width: 780px){
   .contact-section{
@@ -86,7 +101,7 @@
     justify-content: space-between;
   }
   .contact-pargraph{
-    max-width: 500px;
+    max-width: 400px;
   }
 }
 
@@ -104,7 +119,7 @@
   }
 
   .contact-details{
-    max-width: 100px;
+    max-width: 300px;
     text-align: center;
   }
 

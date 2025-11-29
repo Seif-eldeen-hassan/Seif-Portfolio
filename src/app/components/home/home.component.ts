@@ -23,6 +23,7 @@ import { forkJoin } from 'rxjs';
 
 export class HomeComponent implements OnInit {
   @ViewChild(AboutSectionComponent) aboutSection!: AboutSectionComponent;
+  @ViewChild(GetInTouchComponent) contactSection!: GetInTouchComponent;
 
   aboutData: any[] = [];
   achievementsData: any[] = [];
@@ -63,6 +64,10 @@ export class HomeComponent implements OnInit {
 
   scroll_to_project() {
     this.aboutSection.scroll_to_project();
+  }
+
+  scroll_to_contact(){
+    this.contactSection.scroll_to_contact();
   }
 
 }

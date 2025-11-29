@@ -1,11 +1,10 @@
-.skills-section{
-  display: flex;
-  gap: 60px;
-}
 
-.skills-image{
-  width: 780px;
-  height: 840p;
+.skills{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;  
+  gap: 250px;
 }
 
 .skill-title{
@@ -17,6 +16,7 @@
   font-size: 15px;
 }
 .skills-bar{
+  width: 450px;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -87,10 +87,34 @@
   border-radius: 10px;
 }
 
+@media (max-width: 1200px) and (min-width: 780px){
+  .skills{
+    gap: 80px;
+  }
+
+  .skill-pargraph{
+    max-width: 400px;
+  }
+
+  .skills-bar{
+    width: 350px;  
+  }
+
+}
+
+
+@media (min-width: 1200px) and (max-width: 1700px){
+ .skills{
+    gap: 130px;
+  }
+
+}
+
 @media (max-width: 768px){
   .skills{
     align-items: center;
-    flex-direction: row;
+    justify-content: center;
+    gap: 0px;
   }
 
   .skill-title{
@@ -108,5 +132,8 @@
     margin-left: 10px;
   }
 
+  .skills-bar{
+    width: 90%;
+  }
 }
 

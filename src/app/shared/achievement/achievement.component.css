@@ -43,6 +43,8 @@
   width: 40px;
   height: 40px;
   cursor: pointer;
+  animation: moveRightLeft 2s ease-in-out infinite;
+  
 }
 
 .achievement-section{
@@ -105,7 +107,17 @@
   margin-top: 13px;
 }
 
-
+@keyframes moveRightLeft {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 
 
 @media (max-width: 1200px) and (min-width: 780px){

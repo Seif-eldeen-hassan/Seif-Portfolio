@@ -26,10 +26,6 @@
   background-repeat: no-repeat;
 }
 
-.icons{
-  display: flex;
-  gap: 20px;
-}
 
 .copyright{
   font-size: 16px;
@@ -39,16 +35,6 @@
   color: white;
 }
 
-.fa-brands ,.fa-solid{
-  font-size: 24px;
-  color: white;
-  transition: all 0.3s ease-in-out;
-}
-
-.fa-brands:hover ,.fa-solid:hover{
-  font-size: 28px;
-  color: #2BCF7E;
-}
 
 
 
